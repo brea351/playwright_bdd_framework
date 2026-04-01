@@ -27,3 +27,9 @@ jobs:
 
       - name: Run BDD tests
         run: npm run bdd
+
+      - name: Upload Test Report
+  uses: actions/upload-artifact@v4
+  with:
+    name: cucumber-report
+    path: reports/html-report
