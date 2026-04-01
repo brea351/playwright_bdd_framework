@@ -8,7 +8,7 @@ Given('I open the login page', async function () {
   await loginPage.navigate();
 });
 
-// ✅ dynamic login (FIXED)
+// dynamic login (FIXED)
 When('I login with {string} and {string}', async function (username, password) {
 
   const loginPage = new LoginPage(page);
@@ -20,7 +20,7 @@ When('I login with {string} and {string}', async function (username, password) {
 
 });
 
-// ✅ restore invalid step
+// restore invalid step
 When('I login with invalid credentials', async function () {
 
   const loginPage = new LoginPage(page);

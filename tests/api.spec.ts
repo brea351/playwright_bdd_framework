@@ -22,12 +22,12 @@ test('POST create user API', async ({ request }) => {
     }
   });
 
-  // ✅ Status check
+  //  Status check
   expect(response.status()).toBe(201);
 
   const body = await response.json();
 
-  // ✅ Validate response
+  //  Validate response
   expect(body.name).toBe('Tosin QA');
   expect(body.email).toBe('tosin@test.com');
 
