@@ -1,0 +1,21 @@
+{
+  "name": "playwright-bdd-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "bdd": "cucumber-js --require-module ts-node/register --require step-definitions/**/*.ts --require hooks/**/*.ts features/**/*.feature --format json:reports/cucumber-report.json",
+    "report": "ts-node utils/report.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.7.0",
+    "@playwright/test": "^1.58.2",
+    "multiple-cucumber-html-reporter": "^3.10.0",
+    "ts-node": "^10.9.2"
+  }
+}

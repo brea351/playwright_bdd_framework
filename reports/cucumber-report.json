@@ -1,0 +1,248 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "add-item-to-cart;user-adds-product-with-different-users",
+        "keyword": "Scenario Outline",
+        "line": 11,
+        "name": "User adds product with different users",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 843759900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I create a user via API",
+            "match": {
+              "location": "step-definitions\\addToCart.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 849800000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "I login with \"standard_user\" and \"secret_sauce\"",
+            "match": {
+              "location": "step-definitions\\login.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2513886300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I add a backpack to the cart",
+            "match": {
+              "location": "step-definitions\\addToCart.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 124908400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "the cart should contain the item",
+            "match": {
+              "location": "step-definitions\\addToCart.steps.ts:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25262400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 326743999
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "add-item-to-cart;user-adds-product-with-different-users",
+        "keyword": "Scenario Outline",
+        "line": 12,
+        "name": "User adds product with different users",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 847240000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I create a user via API",
+            "match": {
+              "location": "step-definitions\\addToCart.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 224986100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "I login with \"problem_user\" and \"secret_sauce\"",
+            "match": {
+              "location": "step-definitions\\login.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2536925500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I add a backpack to the cart",
+            "match": {
+              "location": "step-definitions\\addToCart.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 101819400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "the cart should contain the item",
+            "match": {
+              "location": "step-definitions\\addToCart.steps.ts:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30385699
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 319166199
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "add-item-to-cart",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Add item to cart",
+    "tags": [],
+    "uri": "features\\addToCart.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login;user-login-with-invalid-credentials",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "User login with invalid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 890284400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the login page",
+            "match": {
+              "location": "step-definitions\\login.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2410472299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I login with invalid credentials",
+            "match": {
+              "location": "step-definitions\\login.steps.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 249121800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should see an error message",
+            "match": {
+              "location": "step-definitions\\login.steps.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7834900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 326432799
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login",
+    "tags": [],
+    "uri": "features\\login.feature"
+  }
+]
