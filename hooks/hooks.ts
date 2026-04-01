@@ -8,10 +8,19 @@ export let page: Page;
 setDefaultTimeout(60 * 1000);
 
 Before(async function () {
-  browser = await chromium.launch({ headless: false });
-  page = await browser.newPage();
+
+  const isCI = process.env.CI; // ✅ Detect CI environment
+
+  browser = await chromium.launch({
+    headless: isCI ? true : false   // ✅ Smart switching
+  });
+
+  const context = await browser.newContext();
+  page = await context.newPage();
 });
 
 After(async function () {
-  await browser.close();
+  if (browser) {   // ✅ Prevent crash if launch fails
+    await browser.close();
+  }
 });
